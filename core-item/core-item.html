@@ -1,0 +1,50 @@
+<link rel="import" href="../core-icon/core-icon.html">
+
+<link rel="stylesheet" href="core-item.css" shim-shadowdom>
+
+<polymer-element name="core-item" attributes="label icon src size" horizontal center layout>
+<template>
+
+  <core-icon src="{{src}}" icon="{{icon}}" size="{{size}}" hidden?="{{!src && !icon}}"></core-icon>{{label}}<content></content>
+  
+</template>
+<script>
+
+  Polymer('core-item', {
+    
+    /**
+     * The URL of an image for the icon.
+     *
+     * @attribute src
+     * @type string
+     * @default ''
+     */
+
+    /**
+     * Specifies the icon from the Polymer icon set.
+     *
+     * @attribute icon
+     * @type string
+     * @default ''
+     */
+
+    /**
+     * Specifies the label for the menu item.
+     *
+     * @attribute label
+     * @type string
+     * @default ''
+     */
+
+    /**
+     * Specifies the size of the icon in pixel units.
+     *
+     * @attribute size
+     * @type number
+     * @default 24
+     */
+
+  });
+
+</script>
+</polymer-element>
